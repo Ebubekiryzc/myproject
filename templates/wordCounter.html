@@ -1,0 +1,10 @@
+<h1>Input your text below: </h1>
+
+<!-- formdan alınan data nereye (hangi path yani url' e) yollanacak onu action belirler: -->
+<!-- method='POST', yollanan verinin url ile gösterilmesinin önüne geçer. -->
+<form method="POST" action="counter">
+    <!-- Post metodu yaptığımızda csrf atağı adındaki saldırıdan şüphelenmeye başlar onun üstesinden gelmek için bunu yazarız: -->
+    {% csrf_token %}
+    <textarea name="text" rows="25" cols="100"></textarea><br>
+    <input type="submit">
+</form>
